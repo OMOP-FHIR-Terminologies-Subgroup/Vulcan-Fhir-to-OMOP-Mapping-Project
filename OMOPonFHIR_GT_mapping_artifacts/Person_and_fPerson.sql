@@ -1,0 +1,2 @@
+insert into f_person (person_id, family_name, given1_name, active) select coalesce(max(person_id), 0)+1, 'TEST', 'NUMBERONE', 1 from f_person;
+insert into person (person_id, gender_concept_id, year_of_birth, month_of_birth, day_of_birth, race_concept_id, ethnicity_concept_id, person_source_value, race_source_value, ethnicity_source_value, ethnicity_source_concept_id) select coalesce(max(person_id), 0)+1, 8507, 1964, 6, 1, 8527, 38003564, 'GTRI-WG-0001', 'White', 'Non Hispanic or Latino', 38003564 from person;
